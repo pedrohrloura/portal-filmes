@@ -1,504 +1,1376 @@
+<!--Desenvolvido por Pedro Henrique Ramos Loura-->
 <!DOCTYPE html>
-<html lang="en">
+
+<html lang="pt-br">
 
 <head>
-
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-
-  <title>Portal de Filmes</title>
-  <meta content="" name="descriptison">
-  <meta content="" name="keywords">
-
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
-
-  <link
-    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
-    rel="stylesheet">
-
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/icofont/icofont.min.css" rel="stylesheet">
-  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
-  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-  <link href="assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
-  <link href="assets/vendor/venobox/venobox.css" rel="stylesheet">
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-
-  <link href="assets/css/style.css" rel="stylesheet">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta charset="utf-8">
+    <title>Portal Filmes</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="icon" href="img/logo.PNG">
+    <link rel="stylesheet" href="style.css">
 </head>
+<!--Menu-->
+<header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <img id="logo" src="img/logo.PNG">
+        <a style="padding-left: 10;" class="navbar-brand" href="#">Portal de Filmes</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">l <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#carrossel">Lançamentos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#destaque">Em destaque</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#avalia">Avaliação</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#entrevista">Entrevistas & Makingof</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#novidades">Novidades</a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Pesquisar" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Pesquisar</button>
+            </form>
+        </div>
+    </nav>
+</header>
 
 <body>
 
-  <header id="header" class="fixed-top d-flex align-items-center">
-    <div class="container d-flex align-items-center">
+    <!-- Modal Ação -->
 
-      <div class="logo mr-auto row">
-        <img style="padding-right: 10px;" src="./assets/img/logo.PNG">
-        <h1 class="text-light"><a href="index.html"><span>Portal de Filmes</span></a></h1>
-
-      </div>
-
-      <nav class="nav-menu d-none d-lg-block">
-        <ul>
-          <li class="active"><a href="#header">Lançamentos</a></li>
-          <!--<li><a href="#about">Lançamentos</a></li>-->
-          <li><a href="#portfolio">Em Destaque</a></li>
-          <li><a href="#team">Ultimas Avaliaçoes</a></li>
-          <li><a href="#services">Entrevistas e makingof </a></li>
-          <li><a href="#pricing">Novidades</a></li>
-        </ul>
-      </nav><!-- .nav-menu -->
-
+    <div class="modal fade bd-example-modal-xl" id="modalAção" tabindex="-1" role="dialog"
+        aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalCenterTitle">Filmes Ação</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="modais col-12 col-sm-12 col-md-12 col-lg-6">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/GMKKq_bYd0E"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+                        <div class="modais_text col-12 col-sm-12 col-md-12 col-lg-6">
+                            <h3><b>Resgate</b></h3>
+                            <b>Sinopse: </b>Em Resgate, Tyler Rake (Chris Hemsworth) um agente especial recebe a difícil
+                            missão de libertar um garoto indiano que é mantido refém na cidade de Dhaka. Apesar de estar
+                            preparado fisicamente, ele precisa lidar com crises de identidade e com seu emocional
+                            fragilizado por problemas do passado para que consiga designar sua tarefa da melhor maneira
+                            possível.<br><br>
+                            <b>Diretor: </b>Sam Hargrave <br><b>Roteiro: </b>Joe Russo
+                            <br><b>Estreia: </b>24 de abril de 2020 <br>
+                            <b>Elenco: </b>Chris Hemsworth | Rudhraksh Jaiswal | Randeep Hooda
+                        </div>
+                    </div><br><br>
+                    <div class="row">
+                        <div class="modais col-12 col-sm-12 col-md-12 col-lg-6">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/g6ng8iy-l0U"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+                        <div class="modais_text col-12 col-sm-12 col-md-12 col-lg-6">
+                            <h3><b>Vingadores: Ultimato</b></h3>
+                            <b>Sinopse: </b>Após Thanos eliminar metade das criaturas vivas, os Vingadores têm de lidar
+                            com a perda de amigos e entes queridos. Com Tony Stark vagando perdido no espaço sem água e
+                            comida, Steve Rogers e Natasha Romanov lideram a resistência contra o titã louco.<br><br>
+                            <b>Diretor: </b>Joe Russo/Anthony Russo <br><b>Roteiro: </b>Christopher Markus/Stephen
+                            McFeely<br><b>Estreia:
+                            </b>25 de abril de 2019<br>
+                            <b>Elenco: </b>Robert Downey Jr. | Chris Evans | Mark Ruffalo | Chris Hemsworth
+                        </div>
+                    </div><br><br>
+                    <div class="row">
+                        <div class="modais col-12 col-sm-12 col-md-12 col-lg-6">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/90bG43JcwRE"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+                        <div class="modais_text col-12 col-sm-12 col-md-12 col-lg-6">
+                            <h3><b>Aquaman</b></h3>
+                            <b>Sinopse: </b>A cidade de Atlantis, que já foi lar de uma das mais avançadas civilizações
+                            do mundo, agora é um reino submerso dominado pelo ganancioso Rei Orm. Com um vasto exército
+                            a seu dispor, Orm planeja conquistar tanto os demais reinos do oceano, quanto o mundo da
+                            superfície. Em seu caminho está Aquaman, meio-humano e meio-atlante, e verdadeiro herdeiro
+                            do trono. Com a ajuda da princesa Mera, Aquaman precisa recuperar o lendário Tridente de
+                            Atlan e aceitar seu destino como protetor das profundezas.<br><br>
+                            <b>Diretor: </b>James Wan <br><b>Roteiro: </b>Will Beall/David Leslie
+                            Johnson-McGoldrick<br><b>Estreia:
+                            </b>13 de dezembro de 2018<br>
+                            <b>Elenco: </b>Jason Momoa | Amber Heard | Willem Dafoe
+                        </div>
+                    </div><br><br>
+                    <div class="row">
+                        <div class="modais col-12 col-sm-12 col-md-12 col-lg-6">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/b4e4pIGHTFw"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+                        <div class="modais_text col-12 col-sm-12 col-md-12 col-lg-6">
+                            <h3><b>Baywatch: S.O.S. Malibu</b></h3>
+                            <b>Sinopse: </b>O ex-atleta olímpico Matt Brody quer se juntar a uma equipe de salva-vidas
+                            de elite liderada por Mitch Buchannon. Quando as drogas e o suspeito dono de um resort
+                            ameaçam a baía, Mitch e Matt precisam colocar suas diferenças de lado e entrar em
+                            ação.<br><br>
+                            <b>Diretor: </b>Seth Gordon<br><b>Roteiro: </b>Damian Shannon/Mark Swift<br><b>Estreia:
+                            </b>15 de junho de 2017<br>
+                            <b>Elenco: </b>Dwayne Johnson | Zac Efron | Alexandra Daddario
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+        </div>
     </div>
-  </header><!-- End Header -->
 
-  <!-- ======= Hero Section ======= -->
-  <section id="testimonials" class="testimonials section-bg">
-    <div class="container">
+    <!-- Modal Animação -->
 
-      <div class="section-title" data-aos="fade-up">
-        <h2>Lançamentos</h2>
-        <p>Filmes Em Destaque </p>
-      </div>
-
-      <div class="owl-carousel testimonials-carousel" data-aos="fade-up" data-aos-delay="200">
-
-        <div class="testimonial-wrap">
-          <div class="testimonial-item">
-            <iframe class="Carroseu" width="560" height="315" src="https://www.youtube.com/embed/aJMfEz2cobI"
-              title="YouTube video player" frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen></iframe>
-            <h3>Godzilla vs Kong</h3>
-            <h4>Ceo &amp; Sinopse</h4>
-            <p>
-              <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-              Em uma época em que os monstros andam na Terra, a luta da humanidade por seu futuro coloca Godzilla e Kong
-              em rota de colisão que verá as duas forças mais poderosas da natureza no planeta se confrontarem em uma
-              batalha espetacular para as idades. Enquanto Monarch embarca em uma missão perigosa em terreno
-              desconhecido e descobre pistas sobre as origens dos Titãs, uma conspiração humana ameaça tirar as
-              criaturas, boas e más, da face da terra para sempre.<i
-                class="bx bxs-quote-alt-right quote-icon-right"></i>
-            </p>
-          </div>
+    <div class="modal fade bd-example-modal-xl" id="modalAnimação" tabindex="-1" role="dialog"
+        aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalCenterTitle">Filmes Animação</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="modais col-12 col-sm-12 col-md-12 col-lg-6">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/yeegSMOA0fk"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+                        <div class="modais_text col-12 col-sm-12 col-md-12 col-lg-6">
+                            <h3><b>SCOOBY! O Filme</b></h3>
+                            <b>Sinopse: </b>Scooby e sua turma encaram o seu maior e mais difícil mistério de todos os
+                            tempos: um plano maligno para liberar o cão fantasma, Cérbero, no mundo. Enquanto corre para
+                            impedir esse "apocãolipse" global, a turma descobre que Scooby tem um legado secreto e um
+                            destino épico maior do que qualquer um podia imaginar.<br><br>
+                            <b>Diretor: </b>Tony Cervone<br><b>Roteiro: </b>Adam Sztykiel<br><b>Estreia:
+                            </b>10 de setembro de 2020<br>
+                            <b>Elenco: </b>Vozes de: Kiersey Clemons | Zac Efron | Will Forte
+                        </div>
+                    </div><br><br>
+                    <br><br>
+                    <div class="row">
+                        <div class="modais col-12 col-sm-12 col-md-12 col-lg-6">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/zQEjE_M2Esw"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+                        <div class="modais_text col-12 col-sm-12 col-md-12 col-lg-6">
+                            <h3><b>Sonic: O Filme</b></h3>
+                            <b>Sinopse: </b>Sonic, o porco-espinho azul mais famoso do mundo, se junta com os seus
+                            amigos para derrotar o terrível Doutor Eggman, um cientista louco que planeja dominar o
+                            mundo, e o Doutor Robotnik, responsável por aprisionar animais inocentes em robôs.<br><br>
+                            <b>Diretor: </b>Jeff Fowler <br><b>Roteiro: </b>Patrick Casey/Joshua Miller<br><b>Estreia:
+                            </b>13 de fevereiro de 2020<br>
+                            <b>Elenco: </b>Jim Carrey | James Marsden | Tika Sumpter
+                        </div>
+                    </div>
+                    <br><br>
+                    <div class="row">
+                        <div class="modais col-12 col-sm-12 col-md-12 col-lg-6">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/76CslX-q5C4"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+                        <div class="modais_text col-12 col-sm-12 col-md-12 col-lg-6">
+                            <h3><b>Toy Story 4</b></h3>
+                            <b>Sinopse: </b>Woody, Buzz Lightyear e o resto da turma embarcam em uma viagem com Bonnie e
+                            um novo brinquedo chamado Forky. A aventura logo se transforma em uma reunião inesperada
+                            quando o ligeiro desvio que Woody faz o leva ao seu amigo há muito perdido, Bo Peep.<br><br>
+                            <b>Diretor: </b>Josh Cooley <br><b>Roteiro: </b> Andrew Stanton/John Lasseter<br><b>Estreia:
+                            </b>20 de junho de 2019<br>
+                            <b>Elenco: </b>Tom Hanks | Tim Allen | Keanu Reeves | Tony Hale
+                        </div>
+                    </div><br><br>
+                    <div class="row">
+                        <div class="modais col-12 col-sm-12 col-md-12 col-lg-6">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/FKy5DyTEnj4"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+                        <div class="modais_text col-12 col-sm-12 col-md-12 col-lg-6">
+                            <h3><b>Os Incríveis 2</b></h3>
+                            <b>Sinopse: </b>Quando Helena Pêra é chamada para voltar a lutar contra o crime como a
+                            super-heroína Mulher-Elástica, cabe ao seu marido, Roberto, a tarefa de cuidar das crianças,
+                            especialmente o bebê Zezé. O que ele não esperava era que o caçula da família também tivesse
+                            superpoderes, que surgem sem qualquer controle.
+                            <br><br>
+                            <b>Diretor: </b>Brad Bird <br><b>Roteiro: </b>Brad Bird<br><b>Estreia:
+                            </b>28 de junho de 2018<br>
+                            <b>Elenco: </b>Holly Hunter | Craig T. Nelson | Brad Bird | Bob Odenkirk
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                </div>
+            </div>
         </div>
-
-        <div class="testimonial-wrap">
-          <div class="testimonial-item">
-            <iframe class="Carroseu" width="560" height="315" src="https://www.youtube.com/embed/jFxOxLLzjG8"
-              title="YouTube video player" frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen></iframe>
-            <h3>Fear Of Rain</h3>
-            <h4>Sinopse</h4>
-            <p>
-              <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-              Uma mulher com esquizofrenia, que luta com alucinações terríveis, começa a suspeitar que seu vizinho
-              raptou uma criança. A única pessoa que acredita nela é Caleb, um garoto que ela nem tem certeza se existe.
-              <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-            </p>
-          </div>
-        </div>
-
-        <div class="testimonial-wrap">
-          <div class="testimonial-item">
-            <iframe class="Carroseu" src="https://www.youtube.com/embed/_C3XrfWlx_g" frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen></iframe>
-            <h3>Love And Monsters</h3>
-            <h4>Sinopse</h4>
-            <p>
-              <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-              Love and Monsters é um filme de comédia romântica e ação pós-apocalíptica dirigido por Michael Matthews, e
-              produzido por Shawn Levy e Dan Cohen. O filme é estrelado por Dylan O'Brien, Michael Rooker, Ariana
-              Greenblatt e Jessica Henwick. <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-              <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-            </p>
-          </div>
-        </div>
-
-        <div class="testimonial-wrap">
-          <div class="testimonial-item">
-            <iframe class="Carroseu" src="https://www.youtube.com/embed/drXJujyIIR8" frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen></iframe>
-            <h3>Coringa </h3>
-            <h4>Sinopse</h4>
-            <p>
-              <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-              Isolado, intimidado e desconsiderado pela sociedade, o fracassado comediante Arthur Fleck inicia seu
-              caminho como uma mente criminosa após assassinar três homens em pleno metrô. Sua ação inicia um movimento
-              popular contra a elite de Gotham City, da qual Thomas Wayne é seu maior representante. <i
-                class="bx bxs-quote-alt-right quote-icon-right"></i>
-            </p>
-          </div>
-        </div>
-
-        <div class="testimonial-wrap">
-          <div class="testimonial-item">
-            <iframe class="Carroseu" src="https://www.youtube.com/embed/Tc-A-PnHzdY" frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen></iframe>
-            <h3>MADE IN ABYSS</h3>
-            <h4>Sinopse</h4>
-            <p>
-              <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-              A história gira em torno de uma cratera numa ilha perdida, descoberta há cerca de 1900 anos, de origem e
-              profundidade desconhecidas. <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-            </p>
-          </div>
-        </div>
-
-      </div>
-
     </div>
-  </section><!-- End Hero -->
 
+    <!-- Modal Comédia -->
 
-  <main id="main">
-
-
-    <section id="services" class="services">
-      <div class="container">
-
-        <div class="section-title" data-aos="fade-up">
-          <h2>Entrevistas e Making Off </h2>
-
+    <div class="modal fade bd-example-modal-xl" id="modalComédia" tabindex="-1" role="dialog"
+        aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalCenterTitle">Filmes Comédia</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="modais col-12 col-sm-12 col-md-12 col-lg-6">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/ayuqionmMts"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+                        <div class="modais_text col-12 col-sm-12 col-md-12 col-lg-6">
+                            <h3><b>Dançarina Imperfeita</b></h3>
+                            <b>Sinopse: </b>Dançarina Imperfeita acompanha Quinn Ackerman (Sabrina Carpenter) que tem
+                            sua admissão na faculdade de seus sonhos dependendo de sua performance em uma competição de
+                            dança. Agora, ela precisa formar um grupo com os melhores dançarinos do esquadrão da escola
+                            e, principalmente, aprender a dançar..<br><br>
+                            <b>Diretor: </b>Laura Terruso <br><b>Roteiro: </b> Alicia Keys/Leslie
+                            Morgenstein<br><b>Estreia:
+                            </b>7 de agosto de 2020<br>
+                            <b>Elenco: </b>Sabrina Carpenter | Jordan Fisher | Liza Koshy
+                        </div>
+                    </div><br><br>
+                    <div class="row">
+                        <div class="modais col-12 col-sm-12 col-md-12 col-lg-6">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/ZewCCWbPlsY"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+                        <div class="modais_text col-12 col-sm-12 col-md-12 col-lg-6">
+                            <h3><b>Mistério no Mediterrâneo</b></h3>
+                            <b>Sinopse: </b>Nick Spitz (Adam Sandler) é um policial que há tempos tenta se tornar
+                            detetive, mas nunca consegue passar na prova para o cargo. Envergonhado, ele diz para sua
+                            esposa (Jennifer Aniston) que trabalha na função, pedindo ao melhor amigo que o ajude nesta
+                            mentira. Um dia, ao chegar em casa, Nick é cobrado por Audrey sobre a sonhada viagem à
+                            Europa, prometida quando eles se casaram, 15 anos atrás. Pressionado, ele diz que já havia
+                            arrumado tudo e, assim, os dois partem em viagem. Ainda no avião, Audrey conhece o
+                            milionário Charles Cavendish (Luke Evans), que os convida para um tour a Mônaco a bordo do
+                            navio de seu tio (Terence Stamp). O casal aceita a oferta, sem imaginar que estaria
+                            envolvido com a investigação em torno de um assassinato em pleno alto-mar.<br><br>
+                            <b>Diretor: </b>Kyle Newacheck <br><b>Roteiro: </b>James Vanderbilt<br><b>Estreia:
+                            </b>14 de junho de 2019<br>
+                            <b>Elenco: </b> Adam Sandler | Jennifer Aniston | Luke Evans
+                        </div>
+                    </div><br><br>
+                    <div class="row">
+                        <div class="modais col-12 col-sm-12 col-md-12 col-lg-6">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/90E-fKUQycw"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+                        <div class="modais_text col-12 col-sm-12 col-md-12 col-lg-6">
+                            <h3><b>Debi & Loide 2</b></h3>
+                            <b>Sinopse: </b>Vinte anos após a sua última aventura, os bem-intencionados, porém não muito
+                            espertos, melhores amigos Harry Debi e Lóide Christmas partem em busca da filha perdida de
+                            Harry, enquanto Lóide tenta conquistar a sua mais nova paixão. No caminho, eles reencontram
+                            diversos personagens do passado e precisam aprender a lidar com responsabilidades para as
+                            quais nenhum deles está preparado.<br><br>
+                            <b>Diretor: </b>Bobby Farrelly/Peter Farrelly <br><b>Roteiro: </b>Sean Anders/Bobby Farrelly
+                            <br><b>Estreia: </b>13 de novembro de 2014<br>
+                            <b>Elenco: </b>Jim Carrey | Jeff Daniels | Rob Riggle
+                        </div>
+                    </div><br><br>
+                    <div class="row">
+                        <div class="modais col-12 col-sm-12 col-md-12 col-lg-6">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/_wjvMWP3L18"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+                        <div class="modais_text col-12 col-sm-12 col-md-12 col-lg-6">
+                            <h3><b>Uma Ladra Sem Limites</b></h3>
+                            <b>Sinopse: </b>Sandy Patterson (Jason Bateman) é um paizão, trabalhador e anda louco por
+                            uma promoção para melhorar a saúde financeira da família que vai crescer ainda mais, já que
+                            sua esposa (Amanda Peet) está grávida. Quando ele estava prestes a dar um salto profissional
+                            significativo, descobre que seu nome está sendo usado indevidamente por alguém em outro
+                            estado. Com a polícia de mãos atadas para resolver o seu caso, ele resolve viajar para
+                            convencer a pilantra (Melissa McCarthy) a se entregar. Só que a missão fica ainda mais
+                            complicada na medida que outras pessoas, entre eles um caçador de recompensas, também querem
+                            a cabeça dela.<br><br>
+                            <b>Diretor: </b>Seth Gordon <br><b>Roteiro: </b> Craig Mazin<br>
+                            <b>Estreia: </b>10 de maio de 2013<br>
+                            <b>Elenco: </b>Melissa McCarthy | Jason Bateman | Amanda Peet
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                </div>
+            </div>
         </div>
-
-        <div class="row">
-          <div class="col-md-6 col-lg-4 d-flex align-items-stretch mb-5 mb-lg-0">
-            <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
-              <iframe class="Carroseu" src="https://www.youtube.com/embed/ngdqf2MJERk" frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen></iframe>
-              <h4 class="title"><a href="">Raya E O Último Dragão</a></h4>
-              <h4 class="title"><a href="">Diretor: Carlos López Estrada, Don Hall </a></h4>
-              <h4 class="title"><a href="">Carlos López Estrada, Don Hall</a></h4>
-
-              <h4 class="title"><a href="">2021</a></h4>
-            </div>
-          </div>
-
-          <div class="col-md-6 col-lg-4 d-flex align-items-stretch mb-5 mb-lg-0">
-            <div class="icon-box" data-aos="fade-up" data-aos-delay="200">
-              <iframe class="Carroseu" src="https://www.youtube.com/embed/vRPlBlHHV8Q" frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen></iframe>
-
-              <h4 class="title"><a href="">Monster Hunter</a></h4>
-              <h4 class="title"><a href="">Diretor: Paul W. S. Anderson </a></h4>
-              <h4 class="title"><a href="">Roterista: Paul W. S. Anderson</a></h4>
-
-              <h4 class="title"><a href="">2021</a></h4>
-
-            </div>
-          </div>
-
-          <div class="col-md-6 col-lg-4 d-flex align-items-stretch mb-5 mb-lg-0">
-            <div class="icon-box" data-aos="fade-up" data-aos-delay="200">
-              <iframe class="Carroseu" src="https://www.youtube.com/embed/drXJujyIIR8" frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen></iframe>
-              <h4 class="title"><a href="">Coringa</a></h4>
-              <h4 class="title"><a href="">Diretor: Todd Phillips </a></h4>
-              <h4 class="title"><a href="">Roterista: Todd Phillips, Scott Silver, Bob Kane</a></h4>
-
-              <h4 class="title"><a href="">2019</a></h4>
-
-            </div>
-          </div>
-
-
-
-
-        </div>
-
-      </div>
-    </section><!-- End Services Section -->
-
-
-    <section id="portfolio" class="portfolio">
-      <div class="container">
-
-        <div class="section-title" data-aos="fade-up">
-          <h2>Em destaques</h2>
-        </div>
-
-        <div class="row" data-aos="fade-up" data-aos-delay="200">
-          <div class="col-lg-12 d-flex justify-content-center">
-            <ul id="portfolio-flters">
-              <li data-filter="*" class="filter-active">Todos</li>
-              <li data-filter=".filter-app">Aventura</li>
-              <li data-filter=".filter-card">Romance</li>
-              <li data-filter=".filter-web">Comedia</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="400">
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-1.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>bird box</h4>
-                <div class="portfolio-links">
-                  <a href="assets/img/portfolio/portfolio-1.jpg" data-gall="portfolioGallery" class="venobox"
-                    title="App 1"><i class="bx bx-plus"></i></a>
-                  <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-2.webp" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Amor entre mulheres</h4>
-                <div class="portfolio-links">
-                  <a href="assets/img/portfolio/portfolio-2.webp" data-gall="portfolioGallery" class="venobox"
-                    title="Web 3"><i class="bx bx-plus"></i></a>
-                  <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-3.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Animais Fantasticos</h4>
-                <div class="portfolio-links">
-                  <a href="assets/img/portfolio/portfolio-3.jpg" data-gall="portfolioGallery" class="venobox"
-                    title="App 2"><i class="bx bx-plus"></i></a>
-                  <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-4.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Incertezas</h4>
-                <div class="portfolio-links">
-                  <a href="assets/img/portfolio/portfolio-4.jpg" data-gall="portfolioGallery" class="venobox"
-                    title="Card 2"><i class="bx bx-plus"></i></a>
-                  <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-5.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Extração</h4>
-                <div class="portfolio-links">
-                  <a href="assets/img/portfolio/portfolio-5.jpg" data-gall="portfolioGallery" class="venobox"
-                    title="Web 2"><i class="bx bx-plus"></i></a>
-                  <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-6.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Advangers</h4>
-                <div class="portfolio-links">
-                  <a href="assets/img/portfolio/portfolio-6.jpg" data-gall="portfolioGallery" class="venobox"
-                    title="App 3"><i class="bx bx-plus"></i></a>
-                  <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-7.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Mulher Maravilha</h4>
-                <div class="portfolio-links">
-                  <a href="assets/img/portfolio/portfolio-7.jpg" data-gall="portfolioGallery" class="venobox"
-                    title="Card 1"><i class="bx bx-plus"></i></a>
-                  <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-8.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Marvel vs Dc</h4>
-                <div class="portfolio-links">
-                  <a href="assets/img/portfolio/portfolio-8.jpg" data-gall="portfolioGallery" class="venobox"
-                    title="Card 3"><i class="bx bx-plus"></i></a>
-                  <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-9.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Doutor Estranho</h4>
-                <div class="portfolio-links">
-                  <a href="assets/img/portfolio/portfolio-9.jpg" data-gall="portfolioGallery" class="venobox"
-                    title="Web 3"><i class="bx bx-plus"></i></a>
-                  <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </section>
-    <section id="team" class="team section-bg">
-      <div class="container">
-
-        <div class="section-title" data-aos="fade-up">
-          <h2>Ultimas Avaliações</h2>
-          <p></p>
-        </div>
-
-        <div class="row">
-
-          <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
-            <div class="member" data-aos="fade-up" data-aos-delay="100">
-              <div class="member-img">
-                <img src="assets/img/team/team-1.jpg" class="img-fluid" alt="">
-                <div class="social">
-                  <a href=""><i class="icofont-twitter"></i></a>
-                  <a href=""><i class="icofont-facebook"></i></a>
-                  <a href=""><i class="icofont-instagram"></i></a>
-                  <a href=""><i class="icofont-linkedin"></i></a>
-                </div>
-              </div>
-              <div class="member-info">
-                <h4>Rennan</h4>
-                <span>
-                  Avaliação: Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
-            <div class="member" data-aos="fade-up" data-aos-delay="200">
-              <div class="member-img">
-                <img src="assets/img/team/team-2.jpg" class="img-fluid" alt="">
-                <div class="social">
-                  <a href=""><i class="icofont-twitter"></i></a>
-                  <a href=""><i class="icofont-facebook"></i></a>
-                  <a href=""><i class="icofont-instagram"></i></a>
-                  <a href=""><i class="icofont-linkedin"></i></a>
-                </div>
-              </div>
-              <div class="member-info">
-                <h4>Sarah </h4>
-                <span> Avaliação: Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</span>
-
-                </span>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
-            <div class="member" data-aos="fade-up" data-aos-delay="300">
-              <div class="member-img">
-                <img src="assets/img/team/team-3.jpg" class="img-fluid" alt="">
-                <div class="social">
-                  <a href=""><i class="icofont-twitter"></i></a>
-                  <a href=""><i class="icofont-facebook"></i></a>
-                  <a href=""><i class="icofont-instagram"></i></a>
-                  <a href=""><i class="icofont-linkedin"></i></a>
-                </div>
-              </div>
-              <div class="member-info">
-                <h4>William</h4>
-                <span>
-                  Avaliação: Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</span>
-                </span>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
-            <div class="member" data-aos="fade-up" data-aos-delay="400">
-              <div class="member-img">
-                <img src="assets/img/team/team-4.jpg" class="img-fluid" alt="">
-                <div class="social">
-                  <a href=""><i class="icofont-twitter"></i></a>
-                  <a href=""><i class="icofont-facebook"></i></a>
-                  <a href=""><i class="icofont-instagram"></i></a>
-                  <a href=""><i class="icofont-linkedin"></i></a>
-                </div>
-              </div>
-              <div class="member-info">
-                <h4>Amanda </h4>
-                <span>
-                  Avaliação: Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</span>
-
-                </span>
-              </div>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </section>
-    <section id="pricing" class="pricing">
-
-
-  </main>
-
-  <!-- ======= Footer ======= -->
-  <footer id="footer">
-    <div class="container">
-      <div class="row d-flex align-items-center">
-        <div class="col-lg-6 text-lg-left text-center">
-          <div class="copyright">
-            Copyrigth 2020- Disciplina de desenvolvimentos de interfaces web-ICEI PUC Minas
-          </div>
-        </div>
-      </div>
     </div>
-  </footer><!-- End Footer -->
 
-  <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
+    <!-- Modal Romance -->
 
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/jquery/jquery.min.js"></script>
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-  <script src="assets/vendor/waypoints/jquery.waypoints.min.js"></script>
-  <script src="assets/vendor/counterup/counterup.min.js"></script>
-  <script src="assets/vendor/owl.carousel/owl.carousel.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/venobox/venobox.min.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
+    <div class="modal fade bd-example-modal-xl" id="modalRomance" tabindex="-1" role="dialog"
+        aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalCenterTitle">Filmes Romance</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="modais col-12 col-sm-12 col-md-12 col-lg-6">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/lWImVp38gy4"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+                        <div class="modais_text col-12 col-sm-12 col-md-12 col-lg-6">
+                            <h3><b>A Barraca do Beijo 2</b></h3>
+                            <b>Sinopse: </b>Em A Barraca do Beijo 2, Elle (Joey King) e Noah (Jacob Elordi) tiveram o
+                            verão mais romântico de suas vidas. Entretanto, quando ele segue para Harvard, ela precisará
+                            lidar com um relacionamento a distância, a expectativa de entrar na faculdade com seu melhor
+                            amigo, Lee (Joel Courtney), e a amizade com o novo colega de classe Marco (Taylor Perez).
+                            <br><br>
+                            <b>Diretor: </b>Vince Marcello <br><b>Roteiro: </b>Vince Marcello<br><b>Estreia:
+                            </b>24 de julho de 2020<br>
+                            <b>Elenco: </b>Joey King | Joel Courtney | Jacob Elordi
+                        </div>
+                    </div><br><br>
+                    <div class="row">
+                        <div class="modais col-12 col-sm-12 col-md-12 col-lg-6">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/7bfS6seiLhk"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+                        <div class="modais_text col-12 col-sm-12 col-md-12 col-lg-6">
+                            <h3><b>A Barraca do Beijo</b></h3>
+                            <b>Sinopse: </b>Melhores amigos desde sempre, Elle (Joey King) e Lee (Joel Courtney) têm a
+                            inventiva ideia de gerenciar uma barraca do beijo durante um evento da escola. Para fazer da
+                            proposta um sucesso, a garota tenta convencer o galã Noah (Jacob Elordi), seu crush e irmão
+                            mais velho de Lee, a participar da brincadeira. Ele mostra-se irredutível, mas os dois
+                            acabam se aproximando como nunca, o que estremece a amizade de Elle e Lee.<br><br>
+                            <b>Diretor: </b>Vince Marcello <br><b>Roteiro: </b>Vince Marcello<br><b>Estreia:
+                            </b>11 de maio de 2018<br>
+                            <b>Elenco: </b>Joey King | Joel Courtney | Jacob Elordi
+                        </div>
+                    </div><br><br>
+                    <div class="row">
+                        <div class="modais col-12 col-sm-12 col-md-12 col-lg-6">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/ZUqU9SQOt10"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+                        <div class="modais_text col-12 col-sm-12 col-md-12 col-lg-6">
+                            <h3><b>Simplesmente Acontece</b></h3>
+                            <b>Sinopse: </b>Alex e Rosie são amigos inseparáveis que cresceram juntos em Londres,
+                            compartilhando entre si suas melhores experiências. Tudo muda quando Alex ganha uma bolsa de
+                            estudos e passa a morar nos EUA. Separados, seus caminhos agora são outros. Mas nos tempos
+                            de hoje é impossível não se conectar. E, em se tratando de amor, o difícil é fazer as
+                            escolhas certas.<br><br>
+                            <b>Diretor: </b>Christian Ditter <br><b>Roteiro: </b>Juliette Towhidi<br><b>Estreia: </b>6
+                            de novembro de 2014<br>
+                            <b>Elenco: </b>Lily Collins | Sam Claflin | Christian Cooke
+                        </div>
+                    </div><br><br>
+                    <div class="row">
+                        <div class="modais col-12 col-sm-12 col-md-12 col-lg-6">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/awUlyiRKQYY"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+                        <div class="modais_text col-12 col-sm-12 col-md-12 col-lg-6">
+                            <h3><b>Um Porto Seguro</b></h3>
+                            <b>Sinopse: </b>Uma mulher misteriosa se muda para uma pequena cidade e recomeça sua vida.
+                            Apesar da moça estar determinada a não formar laços afetivos na nova cidade, ela não
+                            consegue cumprir esse objetivo e acaba levantando questionamentos sobre seu passado, que
+                            esconde um terrível segredo que continua assombrando a sua vida.<br><br>
+                            <b>Diretor: </b>Lasse Hallström <br><b>Roteiro: </b>Leslie Bohem/Dana Stevens<br><b>Estreia:
+                            </b>19 de abril de 2013<br>
+                            <b>Elenco: </b>Julianne Hough | Josh Duhamel | Cobie Smulders
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
-  <!-- Template Main JS File -->
-  <script src="assets/js/main.js"></script>
+    <!-- Modal Todos os Filmes -->
 
+    <div class="modal fade bd-example-modal-xl" id="modalTodos" tabindex="-1" role="dialog"
+        aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalCenterTitle">Filmes</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="modais col-12 col-sm-12 col-md-12 col-lg-6">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/GMKKq_bYd0E"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+                        <div class="modais_text col-12 col-sm-12 col-md-12 col-lg-6">
+                            <h3><b>Resgate</b></h3>
+                            <b>Sinopse: </b>Em Resgate, Tyler Rake (Chris Hemsworth) um agente especial recebe a difícil
+                            missão de libertar um garoto indiano que é mantido refém na cidade de Dhaka. Apesar de estar
+                            preparado fisicamente, ele precisa lidar com crises de identidade e com seu emocional
+                            fragilizado por problemas do passado para que consiga designar sua tarefa da melhor maneira
+                            possível.<br><br>
+                            <b>Diretor: </b>Sam Hargrave <br><b>Roteiro: </b>Joe Russo
+                            <br><b>Estreia: </b>24 de abril de 2020 <br>
+                            <b>Elenco: </b>Chris Hemsworth | Rudhraksh Jaiswal | Randeep Hooda
+                        </div>
+                    </div><br><br>
+                    <div class="row">
+                        <div class="modais col-12 col-sm-12 col-md-12 col-lg-6">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/yeegSMOA0fk"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+                        <div class="modais_text col-12 col-sm-12 col-md-12 col-lg-6">
+                            <h3><b>SCOOBY! O Filme</b></h3>
+                            <b>Sinopse: </b>Scooby e sua turma encaram o seu maior e mais difícil mistério de todos os
+                            tempos: um plano maligno para liberar o cão fantasma, Cérbero, no mundo. Enquanto corre para
+                            impedir esse "apocãolipse" global, a turma descobre que Scooby tem um legado secreto e um
+                            destino épico maior do que qualquer um podia imaginar.<br><br>
+                            <b>Diretor: </b>Tony Cervone<br><b>Roteiro: </b>Adam Sztykiel<br><b>Estreia:
+                            </b>10 de setembro de 2020<br>
+                            <b>Elenco: </b>Vozes de: Kiersey Clemons | Zac Efron | Will Forte
+                        </div>
+                    </div><br><br>
+                    <div class="row">
+                        <div class="modais col-12 col-sm-12 col-md-12 col-lg-6">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/ayuqionmMts"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+                        <div class="modais_text col-12 col-sm-12 col-md-12 col-lg-6">
+                            <h3><b>Dançarina Imperfeita</b></h3>
+                            <b>Sinopse: </b>Dançarina Imperfeita acompanha Quinn Ackerman (Sabrina Carpenter) que tem
+                            sua admissão na faculdade de seus sonhos dependendo de sua performance em uma competição de
+                            dança. Agora, ela precisa formar um grupo com os melhores dançarinos do esquadrão da escola
+                            e, principalmente, aprender a dançar..<br><br>
+                            <b>Diretor: </b>Laura Terruso <br><b>Roteiro: </b> Alicia Keys/Leslie
+                            Morgenstein<br><b>Estreia:
+                            </b>7 de agosto de 2020<br>
+                            <b>Elenco: </b>Sabrina Carpenter | Jordan Fisher | Liza Koshy
+                        </div>
+                    </div><br><br>
+                    <div class="row">
+                        <div class="modais col-12 col-sm-12 col-md-12 col-lg-6">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/lWImVp38gy4"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+                        <div class="modais_text col-12 col-sm-12 col-md-12 col-lg-6">
+                            <h3><b>A Barraca do Beijo 2</b></h3>
+                            <b>Sinopse: </b>Em A Barraca do Beijo 2, Elle (Joey King) e Noah (Jacob Elordi) tiveram o
+                            verão mais romântico de suas vidas. Entretanto, quando ele segue para Harvard, ela precisará
+                            lidar com um relacionamento a distância, a expectativa de entrar na faculdade com seu melhor
+                            amigo, Lee (Joel Courtney), e a amizade com o novo colega de classe Marco (Taylor Perez).
+                            <br><br>
+                            <b>Diretor: </b>Vince Marcello <br><b>Roteiro: </b>Vince Marcello<br><b>Estreia:
+                            </b>24 de julho de 2020<br>
+                            <b>Elenco: </b>Joey King | Joel Courtney | Jacob Elordi
+                        </div>
+                    </div><br><br>
+                    <div class="row">
+                        <div class="modais col-12 col-sm-12 col-md-12 col-lg-6">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/g6ng8iy-l0U"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+                        <div class="modais_text col-12 col-sm-12 col-md-12 col-lg-6">
+                            <h3><b>Vingadores: Ultimato</b></h3>
+                            <b>Sinopse: </b>Após Thanos eliminar metade das criaturas vivas, os Vingadores têm de lidar
+                            com a perda de amigos e entes queridos. Com Tony Stark vagando perdido no espaço sem água e
+                            comida, Steve Rogers e Natasha Romanov lideram a resistência contra o titã louco.<br><br>
+                            <b>Diretor: </b>Joe Russo/Anthony Russo <br><b>Roteiro: </b>Christopher Markus/Stephen
+                            McFeely<br><b>Estreia:
+                            </b>25 de abril de 2019<br>
+                            <b>Elenco: </b>Robert Downey Jr. | Chris Evans | Mark Ruffalo | Chris Hemsworth
+                        </div>
+                    </div><br><br>
+                    <div class="row">
+                        <div class="modais col-12 col-sm-12 col-md-12 col-lg-6">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/zQEjE_M2Esw"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+                        <div class="modais_text col-12 col-sm-12 col-md-12 col-lg-6">
+                            <h3><b>Sonic: O Filme</b></h3>
+                            <b>Sinopse: </b>Sonic, o porco-espinho azul mais famoso do mundo, se junta com os seus
+                            amigos para derrotar o terrível Doutor Eggman, um cientista louco que planeja dominar o
+                            mundo, e o Doutor Robotnik, responsável por aprisionar animais inocentes em robôs.<br><br>
+                            <b>Diretor: </b>Jeff Fowler <br><b>Roteiro: </b>Patrick Casey/Joshua Miller<br><b>Estreia:
+                            </b>13 de fevereiro de 2020<br>
+                            <b>Elenco: </b>Jim Carrey | James Marsden | Tika Sumpter
+                        </div>
+                    </div>
+                    <br><br>
+                    <div class="row">
+                        <div class="modais col-12 col-sm-12 col-md-12 col-lg-6">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/ZewCCWbPlsY"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+                        <div class="modais_text col-12 col-sm-12 col-md-12 col-lg-6">
+                            <h3><b>Mistério no Mediterrâneo</b></h3>
+                            <b>Sinopse: </b>Nick Spitz (Adam Sandler) é um policial que há tempos tenta se tornar
+                            detetive, mas nunca consegue passar na prova para o cargo. Envergonhado, ele diz para sua
+                            esposa (Jennifer Aniston) que trabalha na função, pedindo ao melhor amigo que o ajude nesta
+                            mentira. Um dia, ao chegar em casa, Nick é cobrado por Audrey sobre a sonhada viagem à
+                            Europa, prometida quando eles se casaram, 15 anos atrás. Pressionado, ele diz que já havia
+                            arrumado tudo e, assim, os dois partem em viagem. Ainda no avião, Audrey conhece o
+                            milionário Charles Cavendish (Luke Evans), que os convida para um tour a Mônaco a bordo do
+                            navio de seu tio (Terence Stamp). O casal aceita a oferta, sem imaginar que estaria
+                            envolvido com a investigação em torno de um assassinato em pleno alto-mar.<br><br>
+                            <b>Diretor: </b>Kyle Newacheck <br><b>Roteiro: </b>James Vanderbilt<br><b>Estreia:
+                            </b>14 de junho de 2019<br>
+                            <b>Elenco: </b> Adam Sandler | Jennifer Aniston | Luke Evans
+                        </div>
+                    </div><br><br>
+                    <div class="row">
+                        <div class="modais col-12 col-sm-12 col-md-12 col-lg-6">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/jCqEDVUAPbU"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+                        <div class="modais_text col-12 col-sm-12 col-md-12 col-lg-6">
+                            <h3><b>A Barraca do Beijo</b></h3>
+                            <b>Sinopse: </b>Melhores amigos desde sempre, Elle (Joey King) e Lee (Joel Courtney) têm a
+                            inventiva ideia de gerenciar uma barraca do beijo durante um evento da escola. Para fazer da
+                            proposta um sucesso, a garota tenta convencer o galã Noah (Jacob Elordi), seu crush e irmão
+                            mais velho de Lee, a participar da brincadeira. Ele mostra-se irredutível, mas os dois
+                            acabam se aproximando como nunca, o que estremece a amizade de Elle e Lee.<br><br>
+                            <b>Diretor: </b>Vince Marcello <br><b>Roteiro: </b>Vince Marcello<br><b>Estreia:
+                            </b>11 de maio de 2018<br>
+                            <b>Elenco: </b>Joey King | Joel Courtney | Jacob Elordi
+                        </div>
+                    </div><br><br>
+                    <div class="row">
+                        <div class="modais col-12 col-sm-12 col-md-12 col-lg-6">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/90bG43JcwRE"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+                        <div class="modais_text col-12 col-sm-12 col-md-12 col-lg-6">
+                            <h3><b>Aquaman</b></h3>
+                            <b>Sinopse: </b>A cidade de Atlantis, que já foi lar de uma das mais avançadas civilizações
+                            do mundo, agora é um reino submerso dominado pelo ganancioso Rei Orm. Com um vasto exército
+                            a seu dispor, Orm planeja conquistar tanto os demais reinos do oceano, quanto o mundo da
+                            superfície. Em seu caminho está Aquaman, meio-humano e meio-atlante, e verdadeiro herdeiro
+                            do trono. Com a ajuda da princesa Mera, Aquaman precisa recuperar o lendário Tridente de
+                            Atlan e aceitar seu destino como protetor das profundezas.<br><br>
+                            <b>Diretor: </b>James Wan <br><b>Roteiro: </b>Will Beall/David Leslie
+                            Johnson-McGoldrick<br><b>Estreia:
+                            </b>13 de dezembro de 2018<br>
+                            <b>Elenco: </b>Jason Momoa | Amber Heard | Willem Dafoe
+                        </div>
+                    </div><br><br>
+                    <div class="row">
+                        <div class="modais col-12 col-sm-12 col-md-12 col-lg-6">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/76CslX-q5C4"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+                        <div class="modais_text col-12 col-sm-12 col-md-12 col-lg-6">
+                            <h3><b>Toy Story 4</b></h3>
+                            <b>Sinopse: </b>Woody, Buzz Lightyear e o resto da turma embarcam em uma viagem com Bonnie e
+                            um novo brinquedo chamado Forky. A aventura logo se transforma em uma reunião inesperada
+                            quando o ligeiro desvio que Woody faz o leva ao seu amigo há muito perdido, Bo Peep.<br><br>
+                            <b>Diretor: </b>Josh Cooley <br><b>Roteiro: </b> Andrew Stanton/John Lasseter<br><b>Estreia:
+                            </b>20 de junho de 2019<br>
+                            <b>Elenco: </b>Tom Hanks | Tim Allen | Keanu Reeves | Tony Hale
+                        </div>
+                    </div><br><br>
+                    <div class="row">
+                        <div class="modais col-12 col-sm-12 col-md-12 col-lg-6">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/90E-fKUQycw"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+                        <div class="modais_text col-12 col-sm-12 col-md-12 col-lg-6">
+                            <h3><b>Debi & Loide 2</b></h3>
+                            <b>Sinopse: </b>Vinte anos após a sua última aventura, os bem-intencionados, porém não muito
+                            espertos, melhores amigos Harry Debi e Lóide Christmas partem em busca da filha perdida de
+                            Harry, enquanto Lóide tenta conquistar a sua mais nova paixão. No caminho, eles reencontram
+                            diversos personagens do passado e precisam aprender a lidar com responsabilidades para as
+                            quais nenhum deles está preparado.<br><br>
+                            <b>Diretor: </b>Bobby Farrelly/Peter Farrelly <br><b>Roteiro: </b>Sean Anders/Bobby Farrelly
+                            <br><b>Estreia: </b>13 de novembro de 2014<br>
+                            <b>Elenco: </b>Jim Carrey | Jeff Daniels | Rob Riggle
+                        </div>
+                    </div><br><br>
+                    <div class="row">
+                        <div class="modais col-12 col-sm-12 col-md-12 col-lg-6">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/ZUqU9SQOt10"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+                        <div class="modais_text col-12 col-sm-12 col-md-12 col-lg-6">
+                            <h3><b>Simplesmente Acontece</b></h3>
+                            <b>Sinopse: </b>Alex e Rosie são amigos inseparáveis que cresceram juntos em Londres,
+                            compartilhando entre si suas melhores experiências. Tudo muda quando Alex ganha uma bolsa de
+                            estudos e passa a morar nos EUA. Separados, seus caminhos agora são outros. Mas nos tempos
+                            de hoje é impossível não se conectar. E, em se tratando de amor, o difícil é fazer as
+                            escolhas certas.<br><br>
+                            <b>Diretor: </b>Christian Ditter <br><b>Roteiro: </b>Juliette Towhidi<br><b>Estreia: </b>6
+                            de novembro de 2014<br>
+                            <b>Elenco: </b>Lily Collins | Sam Claflin | Christian Cooke
+                        </div>
+                    </div><br><br>
+                    <div class="row">
+                        <div class="modais col-12 col-sm-12 col-md-12 col-lg-6">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/b4e4pIGHTFw"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+                        <div class="modais_text col-12 col-sm-12 col-md-12 col-lg-6">
+                            <h3><b>Baywatch: S.O.S. Malibu</b></h3>
+                            <b>Sinopse: </b>O ex-atleta olímpico Matt Brody quer se juntar a uma equipe de salva-vidas
+                            de elite liderada por Mitch Buchannon. Quando as drogas e o suspeito dono de um resort
+                            ameaçam a baía, Mitch e Matt precisam colocar suas diferenças de lado e entrar em
+                            ação.<br><br>
+                            <b>Diretor: </b>Seth Gordon<br><b>Roteiro: </b>Damian Shannon/Mark Swift<br><b>Estreia:
+                            </b>15 de junho de 2017<br>
+                            <b>Elenco: </b>Dwayne Johnson | Zac Efron | Alexandra Daddario
+                        </div>
+                    </div><br><br>
+                    <div class="row">
+                        <div class="modais col-12 col-sm-12 col-md-12 col-lg-6">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/FKy5DyTEnj4"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+                        <div class="modais_text col-12 col-sm-12 col-md-12 col-lg-6">
+                            <h3><b>Os Incríveis 2</b></h3>
+                            <b>Sinopse: </b>Quando Helena Pêra é chamada para voltar a lutar contra o crime como a
+                            super-heroína Mulher-Elástica, cabe ao seu marido, Roberto, a tarefa de cuidar das crianças,
+                            especialmente o bebê Zezé. O que ele não esperava era que o caçula da família também tivesse
+                            superpoderes, que surgem sem qualquer controle.
+                            <br><br>
+                            <b>Diretor: </b>Brad Bird <br><b>Roteiro: </b>Brad Bird<br><b>Estreia:
+                            </b>28 de junho de 2018<br>
+                            <b>Elenco: </b>Holly Hunter | Craig T. Nelson | Brad Bird | Bob Odenkirk
+                        </div>
+                    </div><br><br>
+                    <div class="row">
+                        <div class="modais col-12 col-sm-12 col-md-12 col-lg-6">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/_wjvMWP3L18"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+                        <div class="modais_text col-12 col-sm-12 col-md-12 col-lg-6">
+                            <h3><b>Uma Ladra Sem Limites</b></h3>
+                            <b>Sinopse: </b>Sandy Patterson (Jason Bateman) é um paizão, trabalhador e anda louco por
+                            uma promoção para melhorar a saúde financeira da família que vai crescer ainda mais, já que
+                            sua esposa (Amanda Peet) está grávida. Quando ele estava prestes a dar um salto profissional
+                            significativo, descobre que seu nome está sendo usado indevidamente por alguém em outro
+                            estado. Com a polícia de mãos atadas para resolver o seu caso, ele resolve viajar para
+                            convencer a pilantra (Melissa McCarthy) a se entregar. Só que a missão fica ainda mais
+                            complicada na medida que outras pessoas, entre eles um caçador de recompensas, também querem
+                            a cabeça dela.<br><br>
+                            <b>Diretor: </b>Seth Gordon <br><b>Roteiro: </b> Craig Mazin<br>
+                            <b>Estreia: </b>10 de maio de 2013<br>
+                            <b>Elenco: </b>Melissa McCarthy | Jason Bateman | Amanda Peet
+                        </div>
+                    </div><br><br>
+                    <div class="row">
+                        <div class="modais col-12 col-sm-12 col-md-12 col-lg-6">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/awUlyiRKQYY"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+                        <div class="modais_text col-12 col-sm-12 col-md-12 col-lg-6">
+                            <h3><b>Um Porto Seguro</b></h3>
+                            <b>Sinopse: </b>Uma mulher misteriosa se muda para uma pequena cidade e recomeça sua vida.
+                            Apesar da moça estar determinada a não formar laços afetivos na nova cidade, ela não
+                            consegue cumprir esse objetivo e acaba levantando questionamentos sobre seu passado, que
+                            esconde um terrível segredo que continua assombrando a sua vida.<br><br>
+                            <b>Diretor: </b>Lasse Hallström <br><b>Roteiro: </b>Leslie Bohem/Dana Stevens<br><b>Estreia:
+                            </b>19 de abril de 2013<br>
+                            <b>Elenco: </b>Julianne Hough | Josh Duhamel | Cobie Smulders
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Mais Avaliações -->
+
+    <div class="modal fade bd-example-modal-xl" id="modalTodas" tabindex="-1" role="dialog"
+        aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalCenterTitle">Avaliações</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row avaliação_area">
+                        <div class="card col-12 col-sm-12 col-md-12 col-lg-4">
+                            <div class="card-body">
+                                <div class="circle">
+                                    <img
+                                        src="https://i.pinimg.com/originals/8a/36/57/8a36572fa0544046a5c084b680a050c3.jpg">
+                                </div>
+
+                                <div class="avaliador">
+                                    <h4>Maria Eduarda</h4>
+                                    <p class="card-text">
+                                        <b>Avaliação: </b>Muito bom! Bem interessante as matérias em destaque, além de
+                                        trazer novos lançamentos e os destaques, mostra curiosidades sobre esse mundo artístico!
+                                    </p>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    &nbsp;&nbsp;22/03/2021
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card col-12 col-sm-12 col-md-12 col-lg-4">
+                            <div class="card-body">
+                                <div class="circle">
+                                    <img
+                                        src="https://www.homemnoespelho.com.br/wp-content/uploads/2020/12/Homem-No-Espelho-Harmonizacao-facial-uma-tecnica-para-deixar-o-rosto-equilibrado-e-masculo-Lucas-Lobo-2-1024x611.jpg">
+                                </div>
+
+                                <div class="avaliador">
+                                    <h4>Julio Cesar</h4>
+                                    <p class="card-text">
+                                        <b>Avaliação: </b>Ótimo site! Aqui encontrei os melhores lançamentos e
+                                        sugestões. Me encantei com as
+                                        entrevistas!
+                                    </p>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    &nbsp;&nbsp;15/01/2021
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card col-12 col-sm-12 col-md-12 col-lg-4">
+                            <div class="card-body">
+                                <div class="circle">
+                                    <img
+                                        src="https://veja.abril.com.br/wp-content/uploads/2017/03/homem-velho-tratamento-pele-20150115-023.jpg?quality=70&strip=info&resize=680,453">
+                                </div>
+
+                                <div class="avaliador">
+                                    <h4>Victor Guedes</h4>
+                                    <p class="card-text">
+                                        <b>Avaliação: </b>Adorei os vídeos de Making of, em especial o do filme Coringa!
+                                        Muito legal os filmes, já assisti todos!
+                                    </p>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                    &nbsp;&nbsp;22/02/2021
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Todas as Entrevistas -->
+
+    <div class="modal fade bd-example-modal-xl" id="modalEntrevistas" tabindex="-1" role="dialog"
+        aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalCenterTitle">Entrevistas & Making Of</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row entrevista_area">
+                        <div id="ent-4" class="col-12 col-sm-12 col-md-12 col-lg-4">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/c7udl4KEWEk"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen>
+                            </iframe>
+                            <h4>Filme: Rambo - Até o Fim</h4><br>
+                            <b>Diretor: </b>Adrian Grunberg <br><b>Roteiro: </b>Matt Cirulnick e Sylvester
+                            Stallone<br><b>Estreia:
+                            </b>2019
+                        </div>
+                        <div id="ent-5" class="col-12 col-sm-12 col-md-12 col-lg-4">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/fgUyRVOSqlA"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen>
+                            </iframe>
+                            <h4>Filme: 1917</h4><br>
+                            <b>Diretor: </b>Sam Mendes <br><b>Roteiro: </b>Sam Mendes e Krysty
+                            Wilson-Cairns<br><b>Estreia:
+                            </b>2020
+                        </div>
+                        <div id="ent-6" class="col-12 col-sm-12 col-md-12 col-lg-4">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/ZUTB8VbJalg"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen>
+                            </iframe>
+                            <h4>Filme: Adoráveis Mulheres</h4><br>
+                            <b>Diretor: </b>Greta Gerwig <br><b>Roteiro: </b>Greta Gerwig<br><b>Estreia:
+                            </b>2020
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <main class="container-fluid main">
+
+        <div class="row main_area">
+            <!--Carrosel Lançamentos-->
+
+            <div class="col-12" id="carrossel">
+                <h1 id="lançamentos"><b>Lançamentos</b></h1><br>
+                <div id="Carrossel_Lançamentos" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#Carrossel_Lançamentos" data-slide-to="0" class="active"></li>
+                        <li data-target="#Carrossel_Lançamentos" data-slide-to="1"></li>
+                        <li data-target="#Carrossel_Lançamentos" data-slide-to="2"></li>
+                        <li data-target="#Carrossel_Lançamentos" data-slide-to="3"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="row">
+                                <div id="film1" class="col-12 col-sm-12 col-md-12 col-lg-6">
+                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/aJMfEz2cobI"
+                                        frameborder="0"
+                                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                        allowfullscreen>
+                                    </iframe>
+                                </div>
+                                <div id="dados" class="col-12 col-sm-12 col-md-12 col-lg-6">
+                                    <h3><b>Godzilla vs Kong</b></h3>
+                                    <b>Sinopse: </b>Em uma época em que os monstros andam na Terra, a luta da humanidade
+                                    por seu futuro coloca Godzilla e Kong
+                                    em rota de colisão que verá as duas forças mais poderosas da natureza no planeta se
+                                    confrontarem em uma
+                                    batalha espetacular para as idades. Enquanto Monarch embarca em uma missão perigosa
+                                    em terreno
+                                    desconhecido e descobre pistas sobre as origens dos Titãs, uma conspiração humana
+                                    ameaça tirar as
+                                    criaturas, boas e más, da face da terra para sempre.<br><br>
+                                    <b>Diretor: </b>Adam Wingards <br><b>Roteiro: </b>Max Borenstein, Eric
+                                    Pearsons<br><b>Estreia: </b>25 de março de 2021<br>
+                                    <b>Elenco: </b>Millie Bobby Brown | Alexander Skarsgård | Rebecca Hall<br>
+                                    <b>Avaliação:</b>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="row">
+                                <div id="film2" class="col-12 col-sm-12 col-md-12 col-lg-6">
+                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/-19tBHrZwOM"
+                                        frameborder="0"
+                                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                        allowfullscreen>
+                                    </iframe>
+                                </div>
+                                <div id="dados2" class="col-12 col-sm-12 col-md-12 col-lg-6">
+                                    <h3><b>Love And Monsters</b></h3>
+                                    <b>Sinopse: </b>Love and Monsters é um filme de comédia romântica e ação
+                                    pós-apocalíptica dirigido por Michael Matthews, e
+                                    produzido por Shawn Levy e Dan Cohen. O filme é estrelado por Dylan O'Brien, Michael
+                                    Rooker, Ariana
+                                    Greenblatt e Jessica Henwick.<br><br>
+                                    <b>Diretor: </b>Michael Matthews <br><b>Roteiro: </b>Brian Duffield <br><b>Estreia:
+                                    </b>16 de outubro de 2020<br>
+                                    <b>Elenco: </b>Madison Iseman | Katherine Heigl | Israel Broussard<br>
+                                    <b>Avaliação:</b>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="row">
+                                <div id="film3" class="col-12 col-sm-12 col-md-12 col-lg-6">
+                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/jFxOxLLzjG8"
+                                        frameborder="0"
+                                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                        allowfullscreen>
+                                    </iframe>
+                                </div>
+                                <div id="dados3" class="col-12 col-sm-12 col-md-12 col-lg-6">
+                                    <h3><b>Fear Of Rain</b></h3>
+                                    <b>Sinopse: </b>Uma mulher com esquizofrenia, que luta com alucinações terríveis,
+                                    começa a suspeitar que seu vizinho
+                                    raptou uma criança. A única pessoa que acredita nela é Caleb, um garoto que ela nem
+                                    tem certeza se existe.<br><br>
+                                    <b>Diretora: </b>Castille Landon <br><b>Roteiro: </b>Castille Landon<br><b>Estreia:
+                                    </b>10 de fevereiro de 2021<br>
+                                    <b>Elenco: </b>Katie Holmes | Josh Lucas | Jerry O´Connell<br>
+                                    <b>Avaliação:</b>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="row">
+                                <div id="film4" class="col-12 col-sm-12 col-md-12 col-lg-6">
+                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/4l1z5SGdMEo"
+                                        frameborder="0"
+                                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                        allowfullscreen>
+                                    </iframe>
+                                </div>
+                                <div id="dados4" class="col-12 col-sm-12 col-md-12 col-lg-6">
+                                    <h3><b>Raya e o Último Dragão</b></h3>
+                                    <b>Sinopse: </b>Há muito tempo, no mundo de fantasia de Kumandra, humanos e dragões
+                                    viviam juntos em harmonia. Mas quando uma força maligna ameaçou a terra, os dragões
+                                    se sacrificaram para salvar a humanidade. Agora, 500 anos depois, o mesmo mal voltou
+                                    e cabe a uma guerreira solitária, Raya, rastrear o lendário último dragão para
+                                    restaurar a terra despedaçada e seu povo dividido.<br><br>
+                                    <b>Diretores: </b>Carlos López Estrada, Don Hall <br><b>Roteiro: </b>Adele Lim, Qui
+                                    Nguyen<br><b>Estreia:
+                                    </b>4 de março de 2021<br>
+                                    <b>Elenco: </b>Sisu | Namaari | Virana<br>
+                                    <b>Avaliação:</b>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--Destaques-->
+
+            <div class="row destaque_area">
+                <div id="destaque" class="col-12">
+                    <h1><b>Em destaque</b></h1><br>
+                </div>
+
+                <div class="col-12 col-sm-6 col-md-3 col-lg-3">
+                    <img src="img/ação.PNG" width="400px" data-toggle="modal" data-target="#modalAção" class="image">
+                </div>
+
+                <div class="col-12 col-sm-6 col-md-3 col-lg-3">
+                    <img src="img/animação.PNG" width="400px" data-toggle="modal" data-target="#modalAnimação"
+                        class="image">
+                </div>
+
+                <div class="col-12 col-sm-6 col-md-3 col-lg-3">
+                    <img src="img/comedia.PNG" width="400px" data-toggle="modal" data-target="#modalComédia"
+                        class="image">
+                </div>
+
+                <div class="col-12 col-sm-6 col-md-3 col-lg-3">
+                    <img src="img/romance.PNG" width="400px" data-toggle="modal" data-target="#modalRomance"
+                        class="image">
+                </div>
+
+                <div class="maisfilmes col-12">
+                    <button class="btn btn_ef btn-dark" type="button" data-toggle="modal" data-target="#modalTodos">
+                        <i class="fas fa-plus-circle"></i></i> Todos os Filmes
+                    </button>
+                </div>
+            </div>
+
+
+            <!--Avaliações-->
+
+            <div class="row avaliação_area">
+                <div id="avalia" class="col-12">
+                    <h1><b>Últimas Avaliações</b></h1>
+                </div>
+                <div class="card av col-12 col-sm-12 col-md-4 col-lg-4">
+                    <div class="card-body">
+                        <div class="circle">
+                            <img
+                                src="https://image.freepik.com/fotos-gratis/mulher-moderna-tomando-uma-selfie_23-2147893976.jpg">
+                        </div>
+
+                        <div class="avaliador">
+                            <h4>Julia Santos</h4>
+                            <p class="card-text">
+                                <b>Avaliação: </b>O site é ótimo! Apresenta uma diversidade de conteúdos e ótimas dicas
+                                de filmes,
+                                além de ter os melhores lançamentos!
+                            </p>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;23/12/2020
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card av col-12 col-sm-12 col-md-4 col-lg-4">
+                    <div class="card-body">
+                        <div class="circle">
+                            <img src="https://photografos.com.br/wp-content/uploads/2020/09/fotografia-para-perfil.jpg">
+                        </div>
+
+                        <div class="avaliador">
+                            <h4>Marcos Roberto</h4>
+                            <p class="card-text">
+                                <b>Avaliação: </b>Excelentes dicas de filmes! Estava sem opções e nesse site encontrei
+                                ótimas sugestões!
+                            </p>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;10/04/2021
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card av col-12 col-sm-12 col-md-4 col-lg-4">
+                    <div class="card-body">
+                        <div class="circle">
+                            <img
+                                src="https://image.freepik.com/fotos-gratis/perfile-o-retrato-da-femea-atraente-de-raca-mista-preta-atraente-de-oculos-redondos-segurando-o-smartphone-branco-na-mao-e-usando-o-com-expressao-seria-no-rosto-buscando-informacoes-importantes_273609-1282.jpg">
+                        </div>
+
+                        <div class="avaliador">
+                            <h4>Bruna Azevedo</h4>
+                            <p class="card-text">
+                                <b>Avaliação: </b>Adorei os filmes e os vídeos dos Making of e as entrevistas! E ótimas indicações de lançamento!
+                            </p>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;28/03/2021
+                        </div>
+                    </div>
+                </div>
+
+                <div class="maisAv col-12">
+                    <button class="btn btn_ef btn-dark" type="button" data-toggle="modal" data-target="#modalTodas">
+                        <i class="fas fa-plus-circle"></i></i> Mais Avaliações
+                    </button>
+                </div>
+            </div>
+
+            <!--Entrevistas & making of-->
+
+            <div class="fundo_entrevista">
+                <div class="row entrevista_area">
+                    <div id="entrevista" class="col-12">
+                        <h1><b>Entrevistas & Making Of</b></h1>
+                    </div>
+                    <div id="ent-1" class="col-12 col-sm-12 col-md-4 col-lg-4">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/qJBRQrfcysU" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen>
+                        </iframe>
+                        <h4>Filme: Monster Hunter</h4>
+                        <b>Diretor: </b>Paul W. S. Anderson <br><b>Roteiro: </b>Paul W. S. Anderson<br><b>Estreia:
+                        </b>2021
+                    </div>
+                    <div id="ent-2" class="col-12 col-sm-12 col-md-4 col-lg-4">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/drXJujyIIR8" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen>
+                        </iframe>
+                        <h4>Filme: Coringa</h4>
+                        <b>Diretor: </b>Todd Phillips <br><b>Roteiro: </b>Todd Phillips, Scott Silver, Bob
+                        Kane<br><b>Estreia:
+                        </b>2019
+                    </div>
+                    <div id="ent-3" class="col-12 col-sm-12 col-md-4 col-lg-4">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/ngdqf2MJERk" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen>
+                        </iframe>
+                        <h4>Filme: Raya E O Último Dragão</h4>
+                        <b>Diretor: </b>Carlos López Estrada, Don Hall<br><b>Roteiro: </b>Carlos López Estrada, Don
+                        Hall<br><b>Estreia: </b>2021
+                    </div>
+                    <div class="maisEnt col-12">
+                        <button class="btn btn_ef btn-dark" type="button" data-toggle="modal"
+                            data-target="#modalEntrevistas"><i class="fas fa-plus-circle"></i></i> Mais
+                            Entrevistas
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!--Novidades, Sobre e Editorial-->
+
+            <div class="row final">
+                <div class="Novidades col-12 col-lg-9 col-xl-8">
+                    <div id="novidades" class="col-12">
+                        <h2><b>Novidades</b></h2>
+                    </div>
+                    <div class="conteudo col-12">
+                        <div class="row">
+                            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-5">
+                                <a href="http://www.adorocinema.com/noticias/filmes/noticia-156049/"
+                                    target="_blank"><img src="img/Thor.jpg" class="foto image">
+                                </a>
+                            </div>
+
+                            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-7">
+                                <a href="https://www.adorocinema.com/noticias/filmes/noticia-158548/" target="_blank">
+                                    <h4>24/04/2021 - <b>Thor - Love And Thunder: 5 atores que poderiam viver o Hércules
+                                            na Marvel</b>
+                                    </h4>
+                                </a>
+                                Russell Crowe fará sua estreia no filme estrelado por Chris Hemsworth como Zeus. Mas
+                                quem será o Hércules?<br>
+                                <span class="badge badge-pill badge-secondary">Thor</span>&nbsp;&nbsp;
+                                <span class="badge badge-pill badge-secondary">Marvel</span>&nbsp;&nbsp;
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="conteudo col-12">
+                        <div class="row">
+                            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-5">
+                                <a href="https://www.adorocinema.com/noticias/filmes/noticia-158533/"
+                                    target="_blank"><img src="img/oscar.jpg" class="foto image"></a>
+                            </div>
+
+                            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-7">
+                                <a href="http://www.adorocinema.com/noticias/filmes/noticia-156045/" target="_blank">
+                                    <h4>23/04/2021 - <b>Oscar 2021 no Prime Video: Confira quais filmes indicados estão
+                                            disponíveis na plataforma</b></h4>
+                                </a>
+                                Indicados como O Som do Silêncio e Borat 2 estão liberados na plataforma de streaming
+                                por apenas R$9,90 ao mês.<br>
+                                <span class="badge badge-pill badge-secondary">oscar</span>&nbsp;&nbsp;
+                                <span class="badge badge-pill badge-secondary">destaque</span>&nbsp;&nbsp;
+                                <span class="badge badge-pill badge-secondary">melhor filme</span>&nbsp;&nbsp;
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="conteudo col-12">
+                        <div class="row">
+                            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-5">
+                                <a href="https://www.adorocinema.com/noticias/filmes/noticia-158545/"
+                                    target="_blank"><img src="img/capitao.jpg" class="foto image">
+                                </a>
+                            </div>
+
+                            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-7">
+                                <a href="http://www.adorocinema.com/noticias/filmes/noticia-156026" target="_blank">
+                                    <h4>23/04/2021 - <b>Capitão América 4 é confirmado pela Marvel; criador de Falcão e
+                                            o Soldado Invernal escreverá o roteiro</b></h4>
+                                </a>
+                                O quarto filme solo do Capitão América foi confirmado pela Marvel! Confira os primeiros
+                                detalhes.<br>
+                                <span class="badge badge-pill badge-secondary">Marvel</span>&nbsp;&nbsp;
+                                <span class="badge badge-pill badge-secondary">Capitão America</span>&nbsp;&nbsp;
+                                <span class="badge badge-pill badge-secondary">Hollywood</span>&nbsp;&nbsp;
+                            </div>
+                        </div>
+                    </div>
+                    <span id="dividir">
+                        <hr>
+                    </span>
+                </div>
+
+                <div class="Sobre col-12 col-lg-3 col-xl-4">
+                    <div id="sobre" class="col-12">
+                        <h2><b>Sobre</b></h2>
+                        <p>
+                            Site desenvolvido na disciplina de Desenvolvimento de Interfaces Web do ICEI-PUC Minas,
+                            contemplando os módulos iniciais de HTML, CSS e Bootstrap.
+                        </p>
+                    </div>
+                    <div id="editorial" class="col-12">
+                        <h2><b>Editorial</b></h2>
+                        <i class="e fas fa-user"></i>&nbsp;<b>Redação: </b><span class="nomes"></b>Pedro
+                            Loura</span><br>
+                        <i class="e fas fa-user"></i>&nbsp;<b>Pesquisa: </b><span class="nomes"></b>Pedro
+                            Loura</span><br>
+                        <i class="e fas fa-user"></i>&nbsp;<b>Gerente Geral: </b><span class="nomes"></b>Pedro
+                            Loura</span><br><br>
+                        <h4><b>Redes Sociais</b></h4>
+                        <a href="https://www.facebook.com/" target="_blank"><i
+                                class="fab fa-facebook-square fa-2x"></i></a>
+                        &nbsp;&nbsp;&nbsp;
+                        <a href="https://twitter.com/"
+                            target="_blank"><i class="fab fa-twitter fa-2x"></i></a>
+                        &nbsp;&nbsp;&nbsp;
+                        <a href="https://www.instagram.com/" target="_blank"><i
+                                class="fab fa-instagram fa-2x"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!--Footer-->
+    <footer class="container-fluid footer">
+        <div class="row footer_area">
+            <div class="col-12 col-sm-12 col-md-8 col-lg-9">
+                <p>Copyright 2020 - Disciplina de Desenvolvimento de Interfaces Web - <b>ICEI PUC Minas</b></p>
+            </div>
+            <div class="col-12 col-sm-12 col-md-4 col-lg-3">
+                <img id="logo_footer" src="img/logo.PNG">
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/664013050d.js" crossorigin="anonymous"></script>
 </body>
 
 </html>
